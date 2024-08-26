@@ -1,6 +1,6 @@
 .button {
-  width: 8vw;
-  height: 6vh;
+  width: 120px;
+  height: 40px;
   color: white;
   background-color: rgb(9, 9, 142);
   outline-style: none;
@@ -9,4 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
 }
