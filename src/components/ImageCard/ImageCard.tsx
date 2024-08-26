@@ -1,6 +1,20 @@
 import s from "./ImageCard.module.css";
 
-const ImageCard = ({ data, handleOpenModal }) => {
+type DataImage = {
+  id: number;
+  description: string;
+  urls: {
+    small: string;
+    regular: string;
+  };
+};
+
+type Props = {
+  data: DataImage;
+  handleCloseModal: () => void;
+};
+
+const ImageCard = ({ data, handleOpenModal }: Props) => {
   return (
     <div className={s.card}>
       <img

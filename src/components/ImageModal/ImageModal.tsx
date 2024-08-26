@@ -4,17 +4,13 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 
 Modal.setAppElement("#root");
 
-type ImageModal = {
+type Props = {
   isOpen: boolean;
   handleCloseModal: () => void;
   imageUrl: string | null;
 };
 
-const ImageModal: React.FC<ImageModal> = ({
-  isOpen,
-  handleCloseModal,
-  imageUrl,
-}) => {
+const ImageModal = ({ isOpen, handleCloseModal, imageUrl }: Props) => {
   const customStyles = {
     content: {
       top: "50%",
@@ -50,7 +46,7 @@ const ImageModal: React.FC<ImageModal> = ({
           <IoIosCloseCircleOutline size={25} />
         </button>
 
-        <img src={imageUrl} />
+        {imageUrl && <img src={imageUrl} />}
       </div>
     </Modal>
   );

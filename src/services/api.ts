@@ -1,6 +1,6 @@
 import axios from "axios";
 
-type dataImage = {
+type DataImage = {
   id: number;
   description: string;
   urls: {
@@ -9,15 +9,15 @@ type dataImage = {
   };
 };
 
-type dataResponse = {
-  results: dataImage[];
+type DataResponse = {
+  results: DataImage[];
   total_pages: number;
 };
 
 const fetchImages = async (
   query: string,
   page: number
-): Promise<dataResponse> => {
+): Promise<DataResponse> => {
   const response = await axios.get<dataResponse>(
     "https://api.unsplash.com/search/photos",
     {
