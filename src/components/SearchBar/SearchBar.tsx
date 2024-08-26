@@ -4,12 +4,20 @@ import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
 import { FiSearch } from "react-icons/fi";
 
-const SearchBar = ({ setQuery }) => {
-  const initialValues = {
+type Props = {
+  setQuery: (query: string) => void;
+};
+
+type FormValues = {
+  query: string;
+};
+
+const SearchBar = ({ setQuery }: Props) => {
+  const initialValues: FormValues = {
     query: "",
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: FormValues) => {
     const { query } = values;
     if (!query.trim()) {
       toast.error("Search field is empty. Please enter your request");

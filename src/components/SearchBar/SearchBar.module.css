@@ -1,14 +1,12 @@
 .container {
   display: flex;
   gap: 20px;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .wrapper {
   width: 100vw;
   height: 10vh;
-  background-color: rgb(9, 9, 142);
+  background-color: #09098e;
   display: flex;
   align-items: center;
   justify-content: center;

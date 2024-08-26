@@ -11,8 +11,8 @@ type DataImage = {
 };
 
 type Props = {
-  handleOpenModal: () => void;
-  results: DataImage;
+  handleOpenModal: (url: string) => void;
+  results: DataImage[];
 };
 
 const ImageGallery = ({ results, handleOpenModal }: Props) => {

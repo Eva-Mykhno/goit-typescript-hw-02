@@ -11,7 +11,7 @@ type DataImage = {
 
 type Props = {
   data: DataImage;
-  handleCloseModal: () => void;
+  handleOpenModal: (url: string) => void;
 };
 
 const ImageCard = ({ data, handleOpenModal }: Props) => {

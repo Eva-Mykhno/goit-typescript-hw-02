@@ -18,7 +18,7 @@ const fetchImages = async (
   query: string,
   page: number
 ): Promise<DataResponse> => {
-  const response = await axios.get<dataResponse>(
+  const response = await axios.get<DataResponse>(
     "https://api.unsplash.com/search/photos",
     {
       params: {

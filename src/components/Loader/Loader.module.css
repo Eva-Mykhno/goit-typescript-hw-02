@@ -1,5 +1,7 @@
 .loader {
-  margin: 0 auto;
+  min-height: 100vh;
+  background-color: rgb(244, 239, 239);
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 }
